@@ -2,9 +2,7 @@
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
-
 Write a function named getNames that, given an array of people objects, uses map to return an array of names reversed.
-
 For example:
 [
 {
@@ -18,33 +16,45 @@ For example:
   shoeSize: 8
 }
 ]
-
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  // Solution code here...
-  //push to have time
-};
+  let array = [];
+  array = arr.map(value => {
+    return value.name.split('').reverse().join('');
+  });
+  return array;
+
+}; getNames([
+  {
+    name: 'lloyd',
+    age: 32,
+    shoeSize: 12
+  },
+  {
+    name: 'jamie',
+    age: 21,
+    shoeSize: 8
+  }
+]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
-
 Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
-
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
   // Solution code here...
-};
+  let str2 = ' The end.';
+  str2 = str + str2;
+  return str2;
+}; appendTheEnd('This is my story.');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
-
 Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function. That is, the function should modify the array 'in place'.
-
 Do not use a return statement.
-
 For example:
 const a = [1, 2, 3];
 appendFirstToLast(a);
@@ -53,17 +63,16 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
-};
+  let num = arr[0];
+  arr.push(num);
+  console.log(arr);
+}; appendFirstToLast([1, 2, 3]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-
 Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
-
 The change should be reflected in the source object that was passed in to the function. That is, the function should modify the object 'in place'.
-
 Do not use a return statement.
-
 For example:
 const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
@@ -72,15 +81,15 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
-};
+  let obj2=obj;
+  obj2.yearBorn = year;
+  console.log(obj2);
+}; 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
-
 Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
-
 The function should modify the object in place. Do not use a return statement.
-
 For example:
 const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
 setStatusAsAuthor(people);
@@ -93,12 +102,9 @@ const setStatusAsAuthor = (people) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
-
 Write a function that accepts two arrays. Append the values from the second array into the first,
 maintaining the ordering.
-
 The function should modify the first array in place. Do not use a return statement.
-
 For example:
 const a = [1, 2]; NOTE: If you assign an array to a `const`, you can't re-assign it later, but you can change the values in the array.
 const b = [3, 4];
