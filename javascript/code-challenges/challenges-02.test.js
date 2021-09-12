@@ -10,7 +10,6 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
-  // Today I worked on my lab solution for over 9 hours without any break. This has made me so tired now that I can't think of anything. I'm very sorry but I can't understand the requirements, even though I know it's very easy. But I can't do anything because I'm so tired and exhausted, so I can't do the workaround required here? 
 };
 
 /* ------------------------------------------------------------------------------------------------
